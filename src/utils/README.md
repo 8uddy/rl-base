@@ -4,14 +4,13 @@ Wir verwenden TensorBoard für die Protokollierung und Visualisierung von Metrik
 Installation
 Stellen Sie sicher, dass Sie TensorBoard installiert haben. Sie können es mit pip installieren:
 
-shell
-Copy code
+```shell
 pip install tensorboard
+```
 Logger-Implementierung
 Wir haben eine TensorBoardLogger-Klasse implementiert, die die TensorBoard SummaryWriter-Klasse verwendet:
 
-python
-Copy code
+```python
 from torch.utils.tensorboard import SummaryWriter
 
 class TensorBoardLogger:
@@ -52,19 +51,20 @@ for i_episode in range(num_episodes):
 
 # Don't forget to close the logger at the end of training
 logger.close()
+```
+
 TensorBoard starten
 Starten Sie TensorBoard in Ihrem Terminal, um die protokollierten Metriken, Histogramme und Texte zu betrachten:
 
-shell
-Copy code
+```shell
 tensorboard --logdir runs
+```
 Dann können Sie TensorBoard in Ihrem Webbrowser öffnen, indem Sie zu der URL gehen, die in Ihrem Terminal angegeben ist (normalerweise http://localhost:6006/).
 
 Mehrere Trainingsläufe vergleichen
 Sie können die log_dir-Parameter verwenden, um die Daten von verschiedenen Trainingsläufen in unterschiedlichen Ordnern zu speichern. Auf diese Weise können Sie leicht mehrere Läufe in TensorBoard vergleichen:
 
-python
-Copy code
+```python
 # Run 1
 logger = TensorBoardLogger(log_dir='runs/experiment1')
 # ...
@@ -72,6 +72,8 @@ logger = TensorBoardLogger(log_dir='runs/experiment1')
 # Run 2
 logger = TensorBoardLogger(log_dir='runs/experiment2')
 # ...
+
+```
 Wenn Sie nun TensorBoard starten, sehen Sie die Daten von beiden Läufen und können sie direkt vergleichen.
 
 Um die oben genannten Anpassungen in Ihr Projekt zu integrieren, fügen Sie die log_histogram-Methode zu Ihrer TensorBoardLogger-Klasse hinzu und aktualisieren Sie Ihre Trainingsskripte, um diese neue Funktion zu nutzen. Denken Sie daran, die entsprechenden Metriken zu berechnen, die Sie als Histogramme darstellen möchten. In diesem Beispiel habe ich action_distribution verwendet, aber Sie können dies an Ihre spezifischen Bedürfnisse anpassen
