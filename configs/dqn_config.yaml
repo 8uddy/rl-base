@@ -1,0 +1,18 @@
+experiment:
+  name: "DQN Experiment 1"
+  seed: 123
+
+environment:
+  type: "music_mastering"
+
+agent:
+  type: "DQN"
+  learning_rate: 0.001
+  gamma: 0.99
+  epsilon_start: 1.0
+  epsilon_end: 0.01
+  epsilon_decay: 0.995
+
+training:
+  episodes: 1000
+  max_steps_per_episode: 200
