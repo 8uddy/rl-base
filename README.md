@@ -9,6 +9,13 @@
 - Experimente und Hyperparameter-Tuning: Schließlich werden Sie wahrscheinlich viele Experimente durchführen und die Hyperparameter Ihres RL-Agenten abstimmen müssen, um die besten Ergebnisse zu erzielen. Dies könnte die Wahl der Lernrate, die Wahl der Discount-Rate, die Größe Ihres neuronalen Netzwerks und viele andere Faktoren umfassen.
 
 
+Agent: Ein Agent ist das Modell, das Sie trainieren. Es kann als die Person oder das Ding angesehen werden, das Entscheidungen trifft. In einem Spiel könnte der Agent beispielsweise der Spieler sein, der entscheidet, welche Aktionen ausgeführt werden sollen.
+Umwelt: Die Umgebung ist der Kontext, in dem der Agent handelt. Es kann sich um ein Spielbrett, einen Aktienmarkt oder eine physische Welt handeln. Die Umgebung gibt dem Agenten einen Zustand und belohnt oder bestraft den Agenten basierend auf seinen Aktionen.
+Zustand: Der Zustand ist eine Beschreibung der aktuellen Situation des Agenten. Es könnte sich um die Position des Agenten auf einem Spielbrett, die aktuellen Aktienpreise oder die Sensorwerte eines Roboters handeln.
+Aktion: Eine Aktion ist eine Entscheidung, die vom Agenten getroffen wird. Es könnte sich um einen Zug in einem Spiel, den Kauf oder Verkauf von Aktien oder eine physische Bewegung eines Roboters handeln.
+Belohnung: Eine Belohnung ist ein Feedback, das der Agent von der Umgebung erhält. Positive Belohnungen bedeuten, dass der Agent etwas gut gemacht hat, während negative Belohnungen bedeuten, dass der Agent einen Fehler gemacht hat.
+Policy: Eine Policy ist die Strategie, die der Agent verwendet, um Entscheidungen zu treffen. Es ist eine Funktion, die den aktuellen Zustand des Agenten nimmt und eine Aktion auswählt.
+
 ```
 root/
 │
